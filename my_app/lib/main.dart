@@ -1,24 +1,37 @@
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp(new Application());
+
+void main() {
+  runApp(new MaterialApp(home: new Application()));
 }
 
-class Application extends StatelessWidget {
+class Application extends StatefulWidget {
   @override
+  _ApplicationState createState() => new _ApplicationState();
+}
+
+class _ApplicationState extends State<Application> {
+
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: "Stateless Widget",
-      home: new Scaffold(
-        body: new Container(
-          color: Colors.pink,
-          child: new Container(
-            color: Colors.yellow,
-            margin: const EdgeInsets.all(30.0),
-          ),
-        )
-       
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text('Appbar'),
+        backgroundColor: Colors.green,
+        elevation: 30.0,
+        centerTitle: true,
+        titleSpacing: 70.0,
+        toolbarOpacity: 0.5,
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
